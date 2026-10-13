@@ -1,8 +1,8 @@
 {
-  "name": "ara-secretary",
-  "displayName": "Ara Secretary",
+  "name": "secretary",
+  "displayName": "Secretary",
   "description": "회의 비서 페르소나. 회의 녹취록으로 회의록과 액션 아이템을 정리해 Notion에 저장한다",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "author": {
     "name": "조아라"
   },

@@ -1,16 +1,16 @@
 ---
 name: setup
-description: ara-secretary가 회의록과 액션 아이템을 저장할 Notion DB를 연결하거나 새로 만들고 설정 파일에 기록한다. Notion 연결을 확인하고, DB를 둘 페이지를 물은 뒤 기존 DB를 연결하거나 회의록 DB와 액션 아이템 DB를 새로 만든다. "/ara-secretary:setup", "회의 비서 설정", "회의록 저장할 Notion DB 바꿔줘" 같은 요청에 사용.
+description: secretary가 회의록과 액션 아이템을 저장할 Notion DB를 연결하거나 새로 만들고 설정 파일에 기록한다. Notion 연결을 확인하고, DB를 둘 페이지를 물은 뒤 기존 DB를 연결하거나 회의록 DB와 액션 아이템 DB를 새로 만든다. "/secretary:setup", "회의 비서 설정", "회의록 저장할 Notion DB 바꿔줘" 같은 요청에 사용.
 disable-model-invocation: true
 ---
 
 # Notion 저장 설정
 
-회의록 DB와 액션 아이템 DB를 정하고 `~/.claude/ara-secretary/config.json`에 기록한다. 이 파일은 minutes, action-items 스킬이 처음 실행될 때 설정 파일이 없으면 직접 읽어서 따르기도 한다.
+회의록 DB와 액션 아이템 DB를 정하고 `~/.claude/secretary/config.json`에 기록한다. 이 파일은 minutes, action-items 스킬이 처음 실행될 때 설정 파일이 없으면 직접 읽어서 따르기도 한다.
 
 ## 1. 설정 파일
 
-위치: `~/.claude/ara-secretary/config.json` (Windows에서는 `%USERPROFILE%\.claude\ara-secretary\config.json`)
+위치: `~/.claude/secretary/config.json` (Windows에서는 `%USERPROFILE%\.claude\secretary\config.json`)
 
 플러그인 폴더는 업데이트 때 덮어써지므로 설정은 반드시 이 경로에 쓴다. `${CLAUDE_PLUGIN_ROOT}` 안에 쓰지 않는다.
 
@@ -92,7 +92,7 @@ Notion MCP 도구가 있는지 확인한다. 플러그인의 `notion` 서버(`.m
 
 ## 6. 설정 저장
 
-1. `~/.claude/ara-secretary/` 폴더가 없으면 만든다.
+1. `~/.claude/secretary/` 폴더가 없으면 만든다.
 2. 1장 형식으로 `config.json`을 쓴다. ID는 Notion이 돌려준 값을 그대로 쓰고 지어내지 않는다.
 3. 쓴 파일을 다시 읽어 JSON으로 읽히는지 확인한다.
 
